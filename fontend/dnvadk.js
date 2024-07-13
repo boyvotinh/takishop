@@ -13,11 +13,12 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     let user = users.find(u => u.username === username && u.password === password);
     if (user) {
         alert('Đăng nhập thành công!');
-        window.location.href = 'home.html';
+        if (username === 'admin') {
+            window.location.href = 'admin.html';
+        } else {
+            window.location.href = 'home.html';
+        }
     } else {
         alert('Tên đăng nhập hoặc mật khẩu không đúng!');
     }
 });
-// Xử lý đăng kí
-
-

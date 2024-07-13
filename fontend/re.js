@@ -1,5 +1,12 @@
+
 // Khởi tạo mảng users từ localStorage nếu có, nếu không thì sử dụng mảng rỗng
-var users = JSON.parse(localStorage.getItem('users')) || [];
+var users = JSON.parse(localStorage.getItem('users'));
+if (!users) {
+    users = [
+        { username: 'admin', password: '123' }
+    ];
+    localStorage.setItem('users', JSON.stringify(users));
+}
 document.getElementById('createForm').addEventListener('submit', function(event) {
     event.preventDefault();
     var username = document.getElementById('new-username').value;
