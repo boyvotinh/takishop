@@ -20,11 +20,6 @@ function addToCart(button) {
     localStorage.setItem('cart', JSON.stringify(cart));
     displayCart();
 }
-
-
-
-
-
 function displayCart() {
     const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
     const cartList = document.getElementById('cart-items');
@@ -88,7 +83,6 @@ function searchProducts() {
         }
     }
 }
-// Hàm lọc sản phẩm theo giá và loại sản phẩm
 function filterProducts() {
     const priceRange = document.getElementById('priceRange').value;
     const category = document.getElementById('category').value;
