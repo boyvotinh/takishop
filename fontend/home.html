@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body class="body1">
+    <header>
+        <a href="home.html"><div class="logo"><img src="anh_web/logo.png" alt=""></div></a>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+            <form class="search-form" onsubmit="return false;">
+                <input type="text" id="searchInput" placeholder="Search...">
+                <button type="button" onclick="searchProducts()">Search</button>
+            </form>
+        </nav>
+    </header>
+    <main>
+        <section class="products">
+            <h2>Our Top Products</h2>
+            <div class="product-list" id="itemList">
+                <a href="/BAITAPLON_WEB/product-detail/product-detail2.html">
+                    <div class="product-card" data-id="8" data-name="Luffy Gear 4 – Đế tròn" data-description="Description of Product 8" data-price="790000" data-image="anh_web/hang8.jpg" data-category="figure">
+                        <img src="anh_web/hang8.jpg" alt="8" class="product-image">
+                        <h3 class="product-title">Luffy Gear 4 – Đế tròn</h3>
+                        <p class="product-description">new</p>
+                        <span class="product-price">790,000₫</span>
+                </a>
+                <button class="buy-button" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+                <a href="/BAITAPLON_WEB/product-detail/product-detail2.html">
+                    <div class="product-card" data-id="5" data-name="Luffy Gear 5 – Đế Mây – Đèn" data-description="Description of Product 5" data-price="515000" data-image="anh_web/hang5.jpg" data-category="figure">
+                        <img src="anh_web/hang5.jpg" alt="5" class="product-image">
+                        <h3 class="product-title">Luffy Gear 5 – Đế Mây – Đèn</h3>
+                        <p class="product-description">new</p>
+                        <span class="product-price">515,000₫</span>
+                </a>
+                <button class="buy-button" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+                <a href="/BAITAPLON_WEB/product-detail/product-detail2.html">
+                    <div class="product-card" data-id="3" data-name="Anya Forger Cầm Đồ Chơi – 2 Mặt" data-description="Description of Product 3" data-price="290000" data-image="anh_web/hang3.jpg" data-category="figure">
+                        <img src="anh_web/hang3.jpg" alt="3" class="product-image">
+                        <h3 class="product-title">Anya Forger Cầm Đồ Chơi – 2 Mặt</h3>
+                        <p class="product-description">new</p>
+                        <span class="product-price">290,000₫</span>
+                </a>
+                <button class="buy-button" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="see-more">
+                <a href="product.html" class="see-more-button">See More</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        TAKI © Copyright 2016. All Rights Reserved.
+    </footer>
+    <script src="js.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <header>
+        <a href="home.html"><div class="logo"><img src="anh_web/logo.png" alt=""></div></a>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+            <form class="search-form" onsubmit="return false;">
+                <input type="text" id="searchInput" placeholder="Search...">
+                <button type="button" onclick="searchProducts()">Search</button>
+            </form>
+        </nav>
+    </header>
+    <main>
+        <section class="filter-section">
+            <div class="filters">
+                <label for="priceRange">Price:</label>
+                <select id="priceRange" onchange="filterProducts()">
+                    <option value="all">All</option>
+                    <option value="0-100">0 - 100,000₫</option>
+                    <option value="100-300">100,000₫ - 300,000₫</option>
+                    <option value="300-500">300,000₫ - 500,000₫</option>
+                    <option value="1000+">1,000,000₫+</option>
+                </select>
+
+                <label for="category">Category:</label>
+                <select id="category" onchange="filterProducts()">
+                    <option value="all">All</option>
+                    <option value="figure">Figure</option>
+                    <option value="manga">Manga</option>
+                </select>
+        <section class="products">
+            <h1>Our Products</h1>
+            <div class="product-list">
+                <div class="product-list" id="itemList">
+                    <a href="/BAITAPLON_WEB/product-detail/product-detail1.html">
+                        <div class="product-card" data-id="1" data-name="Portgas D. Ace – Tay Lửa GK" data-description="Description of Product 1" data-price="250000" data-image="anh_web/hang1.jpg" data-category="figure">
+                            <img src="anh_web/hang1.jpg" alt="1" class="product-image">
+                            <h3 class="product-title">Portgas D. Ace – Tay Lửa GK</h3>
+                            <p class="product-description">new</p>
+                            <span class="product-price">250,000₫</span>
+                    </a>
+                    <button class="buy-button" onclick="addToCart(this)">Add to Cart</button>
+                    </div>
+                    <a href="/BAITAPLON_WEB/product-detail/product-detail2.html">
+                        <div class="product-card" data-id="2" data-name="Luffy Tay Lửa" data-description="Description of Product 2" data-price="350000" data-image="anh_web/hang2.jpg" data-category="figure">
+                            <img src="anh_web/hang2.jpg" alt="2" class="product-image">
+                            <h3 class="product-title">Luffy Tay Lửa</h3>
+                            <p class="product-description">new</p>
+                            <span class="product-price">350,000₫</span>
+                    </a>
+                    <button class="buy-button" onclick="addToCart(this)">Add to Cart</button>
+                    </div>
+                    <a href="/BAITAPLON_WEB/product-detail/product-detail2.html">
+                        <div class="product-card" data-id="3" data-name="Anya Forger Cầm Đồ Chơi – 2 Mặt" data-description="Description of Product 3" data-price="290000" data-image="anh_web/hang3.jpg" data-category="figure">
+                            <img src="anh_web/hang3.jpg" alt="3" class="product-image">
+                            <h3 class="product-title">Anya Forger Cầm Đồ Chơi – 2 Mặt</h3>
+                            <p class="product-description">new</p>
+                            <span class="product-price">290,000₫</span>
+                    </a>
+                    <button class="buy-button" onclick="addToCart(this)">Add to Cart</button>
+                    </div>
+                    <a href="/BAITAPLON_WEB/product-detail/product-detail2.html">
+                        <div class="product-card" data-id="4" data-name="Luffy Gear 5 – 6 Tay Đỏ" data-description="Description of Product 4" data-price="550000" data-image="anh_web/hang4.jpg" data-category="figure">
+                            <img src="anh_web/hang4.jpg" alt="4" class="product-image">
+                            <h3 class="product-title">Luffy Gear 5 – 6 Tay Đỏ</h3>
+                            <p class="product-description">new</p>
+                            <span class="product-price">550,000₫</span>
+                    </a>
+                    <button class="buy-button" onclick="addToCart(this)">Add to Cart</button>
+                    </div>
+                    <a href="/BAITAPLON_WEB/product-detail/product-detail2.html">
+                        <div class="product-card" data-id="5" data-name="Luffy Gear 5 – Đế Mây – Đèn" data-description="Description of Product 5" data-price="515000" data-image="anh_web/hang5.jpg" data-category="figure">
+                            <img src="anh_web/hang5.jpg" alt="5" class="product-image">
+                            <h3 class="product-title">Luffy Gear 5 – Đế Mây – Đèn</h3>
+                            <p class="product-description">new</p>
+                            <span class="product-price">515,000₫</span>
+                    </a>
+                    <button class="buy-button" onclick="addToCart(this)">Add to Cart</button>
+                    </div>
+                    <a href="/BAITAPLON_WEB/product-detail/product-detail2.html">
+                        <div class="product-card" data-id="6" data-name="Luffy Gear 3 POP Max – BT – Tay Đỏ" data-description="Description of Product 6" data-price="620000" data-image="anh_web/hang6.jpg" data-category="figure">
+                            <img src="anh_web/hang6.jpg" alt="6" class="product-image">
+                            <h3 class="product-title">Luffy Gear 3 POP Max – BT – Tay Đỏ</h3>
+                            <p class="product-description">new</p>
+                            <span class="product-price">620,000₫</span>
+                    </a>
+                    <button class="buy-button" onclick="addToCart(this)">Add to Cart</button>
+                    </div>
+                    <a href="/BAITAPLON_WEB/product-detail/product-detail2.html">
+                        <div class="product-card" data-id="7" data-name="Roronoa Zoro Kimono Trắng 3 Đầu 6 Tay" data-description="Description of Product 7" data-price="1350000" data-image="anh_web/hang7.jpg" data-category="figure">
+                            <img src="anh_web/hang7.jpg" alt="7" class="product-image">
+                            <h3 class="product-title">Roronoa Zoro Kimono Trắng 3 Đầu 6 Tay</h3>
+                            <p class="product-description">new</p>
+                            <span class="product-price">1,350,000</span>
+                    </a>
+                    <button class="buy-button" onclick="addToCart(this)">Add to Cart</button>
+                    </div>
+                    <a href="/BAITAPLON_WEB/product-detail/product-detail2.html">
+                        <div class="product-card" data-id="8" data-name="Luffy Gear 4 – Đế tròn" data-description="Description of Product 8" data-price="790000" data-image="anh_web/hang8.jpg" data-category="figure">
+                            <img src="anh_web/hang8.jpg" alt="8" class="product-image">
+                            <h3 class="product-title">Luffy Gear 4 – Đế tròn</h3>
+                            <p class="product-description">new</p>
+                            <span class="product-price">790,000₫</span>
+                    </a>
+                    <button class="buy-button" onclick="addToCart(this)">Add to Cart</button>
+                    </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        TAKI © Copyright 2016. All Rights Reserved.
+    </footer>
+    <script src="js.js"></script>
+</body>
+</html>

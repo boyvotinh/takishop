@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <header>
+        <a href="home.html"><div class="logo"><img src="anh_web/logo.png" alt=""></div></a>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="cart1">
+            <h2>Shopping Cart</h2>
+            <ul id="cart-items">
+                <!-- Cart items will be dynamically added here -->
+            </ul>
+            <p>Total: <span id="cart-total">0</span></p>
+        <div class="cart">
+            <button onclick="clearCart()">Clear Cart</button>
+            <button onclick="checkout()">Buy</button>
+        </div>
+        </section>
+    </main>
+    <footer>
+        TAKI © Copyright 2016. All Rights Reserved.
+    </footer>
+    <script src="js.js"></script>
+</body>
+</html>
+
+
